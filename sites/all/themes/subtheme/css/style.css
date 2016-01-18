@@ -1,38 +1,77 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 body {
 	background: #000;
+	font-size: 16px;
 	color: #fff;
 }
 .navbar {
 	background: #000;
 }
+
 .menu {
 	background: #000;
 	margin-top: 45px;
-	font-family: 'Lobster', cursive;
+	font-family: 'Source Code Pro'; font-weight: 200;
 	font-size: 15pt;
 	border: 1px groove white;
-	
 }
-.secondary {
+
+a {
+		color: #33ccff;
+}
+
+a:hover {
+		color: #0066ff;
+}
+
+.view-apprentice-blog a {
+	text-decoration: none;
+	font-family: 'Josefin Sans';
+}
+
+.view-apprentice-blog a:hover {
+	text-decoration: underline;
+}
+
+.view-apprentice-blog p {
+	font-family: 'Josefin Sans';
+	font-weight: bold;
+	font-size: 20px;
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 1600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+ul.menu.nav.navbar-nav.secondary {
+	margin-left: 150px;
 	background: #000;
-	
+	float: left;
 }
+
 .secondary > active > a:hover {
 	color: blue;
 }
+
 a.name.navbar-brand {
 	color: #fff;
 }
+
 a.name.navbar-brand:hover {
 	color: blue;
 }
+
 .navbar-default .navbar-nav > li > a  {
 	color: #fff;
 }
+
 .navbar-default .navbar-nav > li > a:hover  {
 	color: blue;
 }
+
 .well {
 	background: #000;
 	color: #fff;
@@ -46,4 +85,40 @@ a.name.navbar-brand:hover {
 .navbar-default .navbar-nav > .active > a:hover {
 	background: #000;
 	color: blue;
+}
+
+.player iframe {
+	width: 100%;
+	height: 640px;
+	border: 1px solid #fff;
+}
+
+.video-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.video-list .field-name-body {
+	color: #fff;
+	font-family: 'Poiret One';
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.region-sidebar-first {
+	margin: auto;
+}
+
+.view-header {
+	font-family: 'Josefin Sans';
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#node-17 > div.field.field-name-body.field-type-text-with-summary.field-label-hidden > div > div {
+	color: #fff;
+	font-family: 'Poiret One';
+	font-size: 18px;
+	font-weight: bold;
 }
