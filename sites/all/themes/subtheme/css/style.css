@@ -1,32 +1,42 @@
-@import url(https://fonts.googleapis.com/css?family=Lobster);
 body {
-	background: #000;
+	background-color: #000;
 	font-size: 16px;
 	color: #fff;
 }
 .navbar {
-	background: #000;
+	background-image: url("http://wakuiy.local/sites/default/files/banner 3.jpg");
+	background-color: #000;
+	background-size: cover;
+}
+
+.navbar-toggle {
+	margin-top: 115px;
+	float: left;
+}
+
+#navbar {
+	height: 175px;
+}
+.page-header {
+	font-family: 'Luckiest Guy';
+	text-align: center;
 }
 
 .menu {
-	background: #000;
-	margin-top: 45px;
-	font-family: 'Source Code Pro'; font-weight: 200;
-	font-size: 15pt;
-	border: 1px groove white;
-}
-
-a {
-		color: #33ccff;
-}
-
-a:hover {
-		color: #0066ff;
+	margin-top: 115px;
+	color: #000;
+	font-family: 'Shadows Into Light';
+	font-weight: bold;
+	font-size: 22px;
+	border: none;
+	text-shadow: -2px -2px 3px #000;
 }
 
 .view-apprentice-blog a {
 	text-decoration: none;
 	font-family: 'Josefin Sans';
+	font-weight: bold;
+	text-shadow: 0 0 10px red;
 }
 
 .view-apprentice-blog a:hover {
@@ -37,39 +47,45 @@ a:hover {
 	font-family: 'Josefin Sans';
 	font-weight: bold;
 	font-size: 20px;
+	text-shadow: -1px 0 5px #c2c2c2;
 }
-@media (min-width: 1200px) {
-	.container {
-		width: 1600px;
+
+@media (min-width: 800px) {
+	#navbar {
 		margin-left: auto;
 		margin-right: auto;
 	}
+	#navbar .container {
+		width: auto;
+		max-width: 1920px;
+	}
 }
 
-ul.menu.nav.navbar-nav.secondary {
-	margin-left: 150px;
-	background: #000;
-	float: left;
-}
-
-.secondary > active > a:hover {
-	color: blue;
-}
-
-a.name.navbar-brand {
-	color: #fff;
-}
-
-a.name.navbar-brand:hover {
-	color: blue;
-}
-
-.navbar-default .navbar-nav > li > a  {
+.navbar-default .navbar-nav > li > a {
 	color: #fff;
 }
 
 .navbar-default .navbar-nav > li > a:hover  {
-	color: blue;
+	color: #000;
+	text-decoration: underline;
+	background-color: rgb(242, 242, 242);
+	border-radius: 25%;
+	border: 2px dashed #000;
+	text-shadow: none;
+}
+
+.navbar-default .navbar-nav > .active > a {
+	color: #fff;
+	text-decoration: underline;
+	background: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a:hover {
+	color: #000;
+	background: transparent;
+	text-shadow: none;
+	background-color: #f2f2f2;
+	border-radius: 25%;
 }
 
 .well {
@@ -77,40 +93,54 @@ a.name.navbar-brand:hover {
 	color: #fff;
 }
 
-.navbar-default .navbar-nav > .active > a {
-	background: #000;
-	color: blue;
-}
-
-.navbar-default .navbar-nav > .active > a:hover {
-	background: #000;
-	color: blue;
-}
-
-.player iframe {
-	width: 100%;
-	height: 640px;
+.player {
+	margin-left: auto;
+	margin-right: auto;
+	width: 79%;
+	height: 540px;
 	border: 1px solid #fff;
 }
-
-.video-list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.player iframe {
+	width: 100%;
+	height: 100%;
+}
+.view-content .node-video-category header {
+	text-align: center;
+	font-family: 'Source Code Pro';
 }
 
-.video-list .field-name-body {
+.view-content .node-video-category .field-name-body {
 	color: #fff;
 	font-family: 'Poiret One';
 	font-size: 18px;
 	font-weight: bold;
+	text-align: center;
 }
-
+.view-content .node-video-category .field-name-body a {
+	text-shadow: 0 0 10px red;
+}
 .region-sidebar-first {
 	margin: auto;
 }
+.region-sidebar-second {
+	position: absolute;
+	right: 15px;
+}
 
 .view-header {
+	font-family: 'Josefin Sans';
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.view-game-settings .views-field-title a {
+	font-family: 'Poiret One';
+	font-size: 24px;
+	font-weight: 5px;
+	text-decoration: underline;
+}
+
+.view-game-settings .views-field-body {
 	font-family: 'Josefin Sans';
 	font-weight: bold;
 	font-size: 18px;
