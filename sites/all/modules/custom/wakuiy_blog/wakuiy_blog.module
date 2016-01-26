@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the wakuiy blog feature.
+ */
+
+include_once 'wakuiy_blog.features.inc';

@@ -1,0 +1,14 @@
+name = wakuiy blog
+description = Blog posts for apprenticeship
+core = 7.x
+package = Features
+dependencies[] = text
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_instance][] = node-blog_post-body
+features[node][] = blog_post
+features[views_view][] = blog
+features_exclude[dependencies][ctools] = ctools
+features_exclude[dependencies][features] = features
