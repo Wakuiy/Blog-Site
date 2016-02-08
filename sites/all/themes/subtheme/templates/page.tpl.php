@@ -126,6 +126,12 @@
 
   <div class="row">
 
+    <?php if (!empty($page['custom sidebar first'])): ?>
+      <div class="customsidebar">
+        <?php print render($page[custom_sidebar_first]); ?>
+      </div>
+    <?php endif; ?>
+
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">
         <?php print render($page['sidebar_first']); ?>
