@@ -1,0 +1,69 @@
+<?php
+
+function my_module_menu() {
+  $items['test/mymodule'] = array(
+    'title' => 'Mymodule',
+    'description' => 'hook_menu() implementation',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('mymodule_form'),
+    'access arguments' => array('Access administration menu'),
+    'type' => MENU_NORMAL_ITEM,
+);
+  return $items;
+}
+
+
+function mymodule_form($form, &$form_state) {
+
+  $form['radius'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Enter radius of circle:'),
+    '#required' => TRUE
+  );
+
+  if (isset($form_state['values']['radius'])) {
+    $form['radius']['#default_value'] = $form_state['values']['radius'];
+  }
+
+  $form['submit'] = array (
+    '#type' => 'submit',
+    '#value' => 'Calculate!',
+  );
+
+  return $form;
+
+}
+
+function mymodule_form_validate($form, &$form_state) {
+  $radius = $form_state['values']['radius'];
+  if (!is_numeric($radius)) {
+    form_set_error('radius', 'Please enter a number');
+    return;
+  }
+  if ($radius < 0) {
+    form_set_error('radius', 'Please enter a positive number');
+    return;
+  }
+
+  if ($radius > PHP_INT_MAX) {
+    form_set_error('radius', 'Please enter a normal number fool');
+    return;
+  }
+}
+
+function mymodule_form_submit($form, &$form_state) {
+  $radius = $form_state['values']['radius'];
+  $circumference = (($radius * 2) * M_PI);
+  $area = (($radius * $radius) * M_PI);
+  drupal_set_message(t('The circumference of the circle is: ' . number_format($circumference, 3) . '<br />' . 'The area of the circle is: ' . number_format($area, 3)));
+
+  $form_state['rebuild'] = TRUE;
+}
+
+function mymodule_form_permission() {
+  return array(
+    'Access administration menu' => array(
+      'title' => t('Access administration menu'),
+    ),
+  );
+}
