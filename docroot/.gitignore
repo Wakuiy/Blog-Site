@@ -2,6 +2,10 @@
 /sites/*/private
 /cache
 
+# Ignore configuration files that may contain sensitive information.
+sites/*/*settings*.php
+
+
 # ** Only works in OSs that support newer versions of fnmatch (Bash 4+)
 /sites/default/**/private
 
