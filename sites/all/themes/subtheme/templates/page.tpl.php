@@ -126,6 +126,12 @@
 
   <div class="row">
 
+    <?php
+      if ( $is_front ) {
+        unset($title);
+      }
+      ?>
+
     <?php if (!empty($page['custom sidebar first'])): ?>
       <div class="customsidebar">
         <?php print render($page[custom_sidebar_first]); ?>
